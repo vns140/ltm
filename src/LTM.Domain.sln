@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTM.Domain", "LTM.Domain\LTM.Domain.csproj", "{B7699480-6AE6-42DD-9257-796E837862D0}"
 EndProject
@@ -11,9 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTM.Infra.Repository", "LTM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTM.Infra.CrossCutting", "LTM.Infra.CrossCutting\LTM.Infra.CrossCutting.csproj", "{AF9B9F2C-5FA7-4F1D-B116-B5CA357BC8C4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{7F3B9B46-8C3A-4C92-99AB-F7760F384AFB}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Barramento", "1 - Barramento", "{5918488A-E9DE-4A96-9A87-8420D0B78EA8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Services", "1 - Services", "{5918488A-E9DE-4A96-9A87-8420D0B78EA8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{2F6B4428-09DC-423A-9DF2-4EF0FDED3A27}"
 EndProject
@@ -84,5 +82,8 @@ Global
 		{72D44A37-29D2-44C5-87B5-2E035D09EB7A} = {5918488A-E9DE-4A96-9A87-8420D0B78EA8}
 		{9744DE69-70D4-46F3-9963-D7BEFA8B6195} = {BE63E86A-9076-44F1-A7F0-FAAB12CEC5C4}
 		{DA0F1EF5-D866-478E-B0C5-DF5F3B0CB5B3} = {9744DE69-70D4-46F3-9963-D7BEFA8B6195}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E95EF9AE-D5FE-41BE-A359-77A16854DD0B}
 	EndGlobalSection
 EndGlobal

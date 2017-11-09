@@ -1,6 +1,5 @@
 ﻿using LTM.Domain.Entities.Core;
 using LTM.Domain.Interfaces.Repositories;
-using LTM.Infra.Repository.Context;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
