@@ -1,6 +1,10 @@
-﻿using Microsoft.Owin;
+﻿using LTM.Application.Interfaces.Core;
+using LTM.Barramento.Dependency;
+using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
+using SimpleInjector;
+using SimpleInjector.Lifestyles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,26 +20,33 @@ namespace LTM.Barramento.App_Start
 
         public void Configuration(IAppBuilder app)
         {
-            ConfigureOAuth(app);
+            Container container = new Container();
+            container = SimpleInjectorWebApiInitializer.Initialize(container);
+            ConfigureOAuth(app, container);
             HttpConfiguration config = new HttpConfiguration();
+            SwaggerConfig.RegisterSwagger(config);
             WebApiConfig.Register(config);
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             app.UseWebApi(config);
         }
 
-        public void ConfigureOAuth(IAppBuilder app)
+        public void ConfigureOAuth(IAppBuilder app, Container container)
         {
-            OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
+            using (AsyncScopedLifestyle.BeginScope(container))
             {
-                AllowInsecureHttp = true,
-                TokenEndpointPath = new PathString("/token"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
-                Provider = new SimpleAuthorizationServerProvider()
-            };
 
-            // Token Generation
-            app.UseOAuthAuthorizationServer(OAuthServerOptions);
-            app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
+                var authApp = container.GetInstance(typeof(IOAuthApp)) as IOAuthApp;
+                OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
+                {
+                    AllowInsecureHttp = true,
+                    TokenEndpointPath = new PathString("/api/token"),
+                    AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
+                    Provider = new SimpleAuthorizationServerProvider(authApp)
+                };
+                app.UseOAuthAuthorizationServer(OAuthServerOptions);
+                app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
+            }           
+         
         }
 
     }

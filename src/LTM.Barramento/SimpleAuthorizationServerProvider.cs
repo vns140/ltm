@@ -12,7 +12,8 @@ namespace LTM.Barramento
     {
         private readonly IOAuthApp _oauthApp;
 
-        public SimpleAuthorizationServerProvider()
+      
+        public SimpleAuthorizationServerProvider(IOAuthApp authApp)
         {
             _oauthApp = GlobalConfiguration.Configuration.DependencyResolver.GetService(typeof(IOAuthApp)) as OAuthApp;
         }
@@ -23,7 +24,6 @@ namespace LTM.Barramento
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
-
             context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
 
             
@@ -37,7 +37,7 @@ namespace LTM.Barramento
             
 
             var identity = new ClaimsIdentity(context.Options.AuthenticationType);
-            identity.AddClaim(new Claim("sub", context.UserName));
+            identity.AddClaim(new Claim("UserName", context.UserName));
             identity.AddClaim(new Claim("role", "user"));
 
             context.Validated(identity);

@@ -27,7 +27,7 @@ namespace LTM.UnitTest
         public async Task DeveObterUmUsuario()
         {
             OAuthRepository oauthRepository = new OAuthRepository();
-            await oauthRepository.FindUser("","");
+            var user = await oauthRepository.FindUser("vns140", "123456");
         }
     }
 }

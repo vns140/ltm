@@ -1,20 +1,22 @@
-﻿using LTM.IoC;
+﻿using LTM.Application.Mapper;
+using LTM.IoC;
 using SimpleInjector;
 using SimpleInjector.Integration.WebApi;
 using System.Web.Http;
 
-[assembly: WebActivatorEx.PostApplicationStartMethod(typeof(LTM.Barramento.Dependency.SimpleInjectorWebApiInitializer), "Initialize")]
+
 namespace LTM.Barramento.Dependency
 {
     public static class SimpleInjectorWebApiInitializer
     {
         /// <summary>Initialize the container and register it as Web API Dependency Resolver.</summary>
-        public static void Initialize()
+        public static Container Initialize(Container container)
         {
-            var container = new Container();
+            
             container.Options.DefaultScopedLifestyle = new WebApiRequestLifestyle();
 
             InitializeContainer(container);
+
 
             container.RegisterWebApiControllers(GlobalConfiguration.Configuration);
 
@@ -22,6 +24,8 @@ namespace LTM.Barramento.Dependency
 
             GlobalConfiguration.Configuration.DependencyResolver =
                 new SimpleInjectorWebApiDependencyResolver(container);
+
+            return container;
         }
 
         private static void InitializeContainer(Container container)

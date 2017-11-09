@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LTM.Infra.Repository.Repositories
 {
-    public class OAuthRepository : IDisposable, IOAuthRepository
+    public class OAuthRepository :  IOAuthRepository
     {
         private Repository.Context.ContextOAuth _ctx;
 
@@ -36,11 +36,6 @@ namespace LTM.Infra.Repository.Repositories
             return user;
         }
 
-        public void Dispose()
-        {
-            _ctx.Dispose();
-            _userManager.Dispose();
-
-        }
+        
     }
 }

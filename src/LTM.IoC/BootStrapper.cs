@@ -14,10 +14,10 @@ namespace LTM.IoC
     {
         public static void RegisterServices(Container container)
         {
-            container.Register<IProdutoRepository, ProdutoRepository>(Lifestyle.Scoped);
-            container.Register<IProdutoApp, ProdutoApp>(Lifestyle.Scoped);
-            container.Register<IOAuthApp, OAuthApp>(Lifestyle.Scoped);
-            container.Register<IOAuthRepository, OAuthRepository>(Lifestyle.Scoped);
+            container.Register<IProdutoRepository, ProdutoRepository>(Lifestyle.Transient);
+            container.Register<IProdutoApp, ProdutoApp>(Lifestyle.Transient);
+            container.Register<IOAuthApp, OAuthApp>(Lifestyle.Transient);
+            container.Register<IOAuthRepository, OAuthRepository>(Lifestyle.Transient);
 
             #region Mapper
             var mapperConfig = AutoMapperConfig.GetMapperConfiguration();
