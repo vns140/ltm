@@ -9,7 +9,10 @@ using System.Web.Http;
 
 namespace LTM.Barramento.Controllers
 {
-    [Authorize]
+    /// <summary>
+    /// API responsável pelas ifnormações de PRODUTO
+    /// </summary>
+    [Authorize]        
     public class ProdutosController : ApiController
     {
         private readonly IProdutoApp _produtoApp;
