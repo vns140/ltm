@@ -22,12 +22,13 @@ Aqui você encontra os serviços desenvolvidos, bem básico.
 
 ## O que foi desenvolvido
 
-1 - Criado uma Api rest
-2 - Implemente o padrão oauth para geração e validação de token de acesso, bem básico sem refresh token, somente para atender a solicitação.
+1 - Criado uma Api rest <br/>
+2 - Implemente o padrão oauth para geração e validação de token de acesso, bem básico sem refresh token, somente para atender a solicitação.<br/>
 3- Criado uma rota de listagem de produtos, que só deve retorna a lista de produtos se
-receber um token válido.
-4-  Criar um seed para criação de um usuário no SQL Server e criação dos produtos no MONGODB.
-
+receber um token válido.<br/>
+4-  Criar um seed para criação de um usuário no SQL Server e criação dos produtos no MONGODB.<br/>
+<br/>
+<br/>
 Injeção de Dependência com SimpleInjector.
 AutoMapper na Conversão de Entidade X Model.
 Web API como serviço
