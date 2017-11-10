@@ -1,6 +1,6 @@
 # Prova Grupo LTM - Vinícius Alexandre Saraiva Silva
 
-Este projeto foi desenvolviod em uma arquitetura desenhada baseada em DDD, tentei fazer um básico
+Este projeto foi desenvolvido em uma arquitetura focada em DDD, tentei fazer um básico para mostrar o conhecimento.
 
 ## Development server
 
