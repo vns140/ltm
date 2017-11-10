@@ -1,5 +1,7 @@
 namespace LTM.Infra.Repository.Migrations
 {
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -7,25 +9,26 @@ namespace LTM.Infra.Repository.Migrations
 
     internal sealed class Configuration : DbMigrationsConfiguration<LTM.Infra.Repository.Context.ContextOAuth>
     {
-        public Configuration()
+        public Configuration():base()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
+            
         }
 
-        protected override void Seed(LTM.Infra.Repository.Context.ContextOAuth context)
-        {
-            //  This method will be called after migrating to the latest version.
+        //protected override void Seed(LTM.Infra.Repository.Context.ContextOAuth context)
+        //{
+        //    base.Seed(context);
+            
+        //    UserManager<IdentityUser> _userManager = new UserManager<IdentityUser>(new UserStore<Microsoft.AspNet.Identity.EntityFramework.IdentityUser>(context));
+        //    Domain.Entities.Core.User user = new Domain.Entities.Core.User { UserName = "ltm", Password = "123456", ConfirmPassword = "123456" };
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
-        }
+        //    IdentityUser userIdentity = new IdentityUser
+        //    {
+        //        UserName = user.UserName
+        //    };
+
+        //    _userManager.Create(userIdentity, user.Password);
+
+        //}
     }
 }
