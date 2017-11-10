@@ -8,7 +8,7 @@ Coloque o projeto LTM.Barramento como start project, o cadastro de produtos vai 
 
 Um Usuário vai ser criado automaticamente no seed do contexto do SQL Server.
 
-Deixei está arquitetura hibrida em banco de dados somente para mostrar um pouco do conhecimento.
+Deixei está arquitetura híbrida em banco de dados somente para mostrar um pouco do conhecimento.
 
 ## Documentação API Swagger
 
