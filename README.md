@@ -16,7 +16,8 @@ http://localhost:49468/swagger/ui/index
 
 Aqui você encontra os serviços desenvolvidos, bem básico.
 
-
+## Desenho Arquitetura
+<img src="http://www.mileseg.com/arquitetura/arquitetura.png" alt="Arquitetura Vinícius">
 
 
 ## O que foi desenvolvido
