@@ -22,7 +22,7 @@ namespace LTM.Domain.Interfaces.Repositories
         Task Update(Produto produto);
 
         /// <summary>
-        /// Obtêm uma lista de produtos paginados
+        /// Obtêm uma lista de produtos
         /// </summary>
         /// <returns></returns>
         Task<IEnumerable<Produto>> Get();

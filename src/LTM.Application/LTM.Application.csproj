@@ -72,8 +72,8 @@
     <Compile Include="Mapper\Adapter\AutoMapperAdapter.cs" />
     <Compile Include="Mapper\AutoMapperConfig.cs" />
     <Compile Include="Mapper\Adapter\IAutoMapperAdapter.cs" />
-    <Compile Include="Mapper\Profile\OAuthProfile.cs" />
-    <Compile Include="Mapper\Profile\ProdutoProfile.cs" />
+    <Compile Include="Mapper\Profile\Core\OAuthProfile.cs" />
+    <Compile Include="Mapper\Profile\Produo\ProdutoProfile.cs" />
     <Compile Include="Models\Core\EntityBaseModel.cs" />
     <Compile Include="Models\Core\OAuth\UserModel.cs" />
     <Compile Include="Models\Produto\ProdutoModel.cs" />

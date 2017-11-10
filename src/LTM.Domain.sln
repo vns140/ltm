@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTM.Domain", "LTM.Domain\LTM.Domain.csproj", "{B7699480-6AE6-42DD-9257-796E837862D0}"
 EndProject
@@ -32,6 +32,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.3 - Dependency", "4.3 - Dependency", "{9744DE69-70D4-46F3-9963-D7BEFA8B6195}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTM.IoC", "LTM.IoC\LTM.IoC.csproj", "{DA0F1EF5-D866-478E-B0C5-DF5F3B0CB5B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desenho Arquitetura", "Desenho Arquitetura", "{BFE4B07C-94DE-4A5C-85E9-F357421F0146}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Pictures\arquitetura.png = ..\..\..\Pictures\arquitetura.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

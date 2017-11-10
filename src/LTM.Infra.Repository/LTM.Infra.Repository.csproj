@@ -102,9 +102,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\Context.cs" />
-    <Compile Include="Context\ContextOAuth.cs" />
-    <Compile Include="Context\NoSqlContext.cs" />
+    <Compile Include="Context\NoSql\ContextProduto.cs" />
+    <Compile Include="Context\Sql\ContextOAuth.cs" />
+    <Compile Include="Context\NoSql\NoSqlContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Core\OAuth\OAuthRepository.cs" />
