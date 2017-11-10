@@ -19,9 +19,9 @@ namespace LTM.Barramento.Controllers
         }
 
         // GET: api/Produtos
-        public async Task<IHttpActionResult> Get(int limit, int offset)
+        public async Task<IHttpActionResult> Get()
         {
-            var response  = await _produtoApp.Get(limit, offset);
+            var response  = await _produtoApp.Get();
 
             if (response.OperationResult.Status == StatusOperation.ERRORRESULT)
             {

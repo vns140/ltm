@@ -28,7 +28,7 @@ namespace LTM.Application.Interfaces
         /// <param name="limit">Quantidade de itens por retorno</param>
         /// <param name="offset">Deslocamento</param>
         /// <returns></returns>
-        Task<ResponseCore<IEnumerable<ProdutoModel>>> Get(int limit, int offset);
+        Task<ResponseCore<IEnumerable<ProdutoModel>>> Get();
 
         /// <summary>
         /// Obtêm um produto pela identificação

@@ -45,12 +45,11 @@ namespace LTM.Infra.Repository.Repositories
             catch (Exception ex) { throw ex; }
         }
 
-        public async Task<IEnumerable<Produto>> Get(int limit, int offset)
+        public async Task<IEnumerable<Produto>> Get()
         {
             try
             {
-                return await Db.Produtos.AsQueryable().Skip(offset)
-                    .Take(limit).ToListAsync();
+                return await Db.Produtos.AsQueryable().ToListAsync();
             }
             catch (Exception ex) { throw ex; }
         }

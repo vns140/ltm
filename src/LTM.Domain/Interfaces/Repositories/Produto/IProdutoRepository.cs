@@ -24,10 +24,8 @@ namespace LTM.Domain.Interfaces.Repositories
         /// <summary>
         /// Obtêm uma lista de produtos paginados
         /// </summary>
-        /// <param name="limit">Quantidade de itens por retorno</param>
-        /// <param name="offset">Deslocamento</param>
         /// <returns></returns>
-        Task<IEnumerable<Produto>> Get(int limit, int offset);
+        Task<IEnumerable<Produto>> Get();
 
         /// <summary>
         /// Obtêm um produto pela identificação

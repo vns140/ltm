@@ -58,7 +58,7 @@ namespace LTM.ProdutoUnitTest
             ProdutoRepository produtoRepository = new ProdutoRepository();
 
             //act
-            IEnumerable<Produto> produtos = await produtoRepository.Get(0,10);
+            IEnumerable<Produto> produtos = await produtoRepository.Get();
 
             //assert
             Assert.IsNotNull(produtos);

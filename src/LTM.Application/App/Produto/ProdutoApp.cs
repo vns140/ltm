@@ -40,12 +40,12 @@ namespace LTM.Application.App
             return response;
         }
 
-        public async Task<ResponseCore<IEnumerable<ProdutoModel>>> Get(int limit, int offset)
+        public async Task<ResponseCore<IEnumerable<ProdutoModel>>> Get()
         {
             var response = new ResponseCore<IEnumerable<ProdutoModel>>();
             try
             {
-                IEnumerable<Produto> produtos = await _produtoRepository.Get(limit, offset);
+                IEnumerable<Produto> produtos = await _produtoRepository.Get();
                 response.Data = _mapper.Adapt<IEnumerable<Produto>, IEnumerable<ProdutoModel>>(produtos);
                 response.OperationResult.Status = StatusOperation.OKRESULT;
             }
